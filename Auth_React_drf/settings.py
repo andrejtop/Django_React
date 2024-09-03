@@ -93,11 +93,11 @@ WSGI_APPLICATION = 'Auth_React_drf.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'django_react',
-        'HOST': 'localhost',
+        'NAME': env('NAME_DB'),
+        'HOST': env('HOST'),
         'PORT': 5432,
-        'USER': 'postgres',
-        'PASSWORD': 'r6gu4z',
+        'USER': env('USER_DB'),
+        'PASSWORD': env('PASSWORD_DB'),
     }
 }
 
